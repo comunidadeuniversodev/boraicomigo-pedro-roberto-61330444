@@ -1,4 +1,4 @@
-<h1>Testando o commit</h1>
+<h1>TESTANDO COMMIT</h1>
 Colocar readme.md no projeto
 Como desenvolvedores, é importante termos um bom readme para facilitar o entendimento do projeto.
 Informações necessárias

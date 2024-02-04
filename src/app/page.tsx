@@ -6,7 +6,7 @@ import { CalendarDays } from 'lucide-react';
 import { Users2 } from 'lucide-react';
 import { Car } from 'lucide-react';
 
-import Content from "@/Components/Content";
+import { DatePicker } from "@tremor/react";
 
 export default function Home() {
   return (
@@ -17,7 +17,8 @@ export default function Home() {
           <div className="md:flex flex-row items-center justify-between  mx-auto gap-4">
             <Input type="text" variant="bordered" label="Origem" placeholder="De onde está saindo?" color="primary" />
             <Input type="text" variant="bordered" label="Destino" placeholder="Pra onde está indo?" color="primary" />
-            <Input type="text" variant="bordered" label="Quando?" placeholder="Hoje" color="primary" endContent={<CalendarDays className="text-primary" />} />
+            <Input type="text" variant="bordered" label="Quando?" placeholder="Hoje" color="primary" endContent={<CalendarDays className="text-primary" />}  />
+            <DatePicker className="max-w-sm mx-auto" />
             <Input type="text" variant="bordered" label="Quantas pessoas?" placeholder="Só eu..." color="primary" endContent={<Users2 className="text-primary" />} />
           </div>
           <div className="md:flex flex-row items-center mx-auto gap-6">

@@ -1,3 +1,6 @@
+'use client';
+import React, { useState, useEffect } from 'react'
+
 import Image from 'next/image'
 import {Input} from "@nextui-org/react";
 import {Button} from "@nextui-org/react";
@@ -6,9 +9,15 @@ import { CalendarDays } from 'lucide-react';
 import { Users2 } from 'lucide-react';
 import { Car } from 'lucide-react';
 
-import { DatePicker } from "@tremor/react";
+import { DateRangePicker } from "@tremor/react";
 
 export default function Home() {
+  const [ShowCalendary, SetShowCalendary] = useState(false)
+
+  const toggleCalendary = () => {
+    SetShowCalendary(!ShowCalendary)
+  }
+
   return (
     <>
       <main className="md:flex flex-col min-h-screen bg-defaultBackground justify-center">
@@ -17,8 +26,13 @@ export default function Home() {
           <div className="md:flex flex-row items-center justify-between  mx-auto gap-4">
             <Input type="text" variant="bordered" label="Origem" placeholder="De onde está saindo?" color="primary" />
             <Input type="text" variant="bordered" label="Destino" placeholder="Pra onde está indo?" color="primary" />
-            <Input type="text" variant="bordered" label="Quando?" placeholder="Hoje" color="primary" endContent={<CalendarDays className="text-primary" />}  />
-            <DatePicker className="max-w-sm mx-auto" />
+            <Input type="text" variant="bordered" label="Quando?" placeholder="Hoje" color="primary" onFocus={toggleCalendary} 
+            endContent={<CalendarDays/>}/> {ShowCalendary && (<DateRangePicker
+              className="max-w-sm mx-auto"
+              enableSelect={false}
+              onClose={toggleCalendary}
+            />)}
+
             <Input type="text" variant="bordered" label="Quantas pessoas?" placeholder="Só eu..." color="primary" endContent={<Users2 className="text-primary" />} />
           </div>
           <div className="md:flex flex-row items-center mx-auto gap-6">

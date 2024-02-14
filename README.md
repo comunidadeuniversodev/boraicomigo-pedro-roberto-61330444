@@ -3,9 +3,14 @@
 <h2>Como desenvolvedores, é importante termos um bom readme para facilitar o entendimento do projeto.</h2>
 <h3>Informações necessárias</h3>
 <ul>
-  <li>Descrição curta do projeto</li>
-  <li>Processo de instalação</li>
-  <li>Dependências do projeto</li>
+  <li>Descrição curta do projeto:
+   este projeto visa organizar caronas em um carro 
+  </li>
+  <li>Processo de instalação: yarn isntall
+  </li>
+  <li>Dependências do projeto: Tremor e UiNext
+  
+  </li>
 </ul>
 <h2>Referências e idéias</h2>
 
